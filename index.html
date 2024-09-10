@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Authentication Section -->
+    <div id="auth-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" required>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+    </div>
+
+    <!-- Signup Section -->
+    <div id="signup-container" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" required>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard" style="display: none;">
+        <h2>Item Management</h2>
+        <button id="add-item-btn">Add Item</button>
+        <ul id="items-list"></ul>
+    </div>
+
+    <!-- Item Management Modal -->
+    <div id="item-modal" style="display: none;">
+        <h3 id="modal-title">Add Item</h3>
+        <form id="item-form">
+            <label for="item-name">Item Name:</label>
+            <input type="text" id="item-name" required>
+            
+            <label for="item-quantity">Quantity:</label>
+            <input type="number" id="item-quantity" required>
+
+            <label for="item-description">Description:</label>
+            <textarea id="item-description" required></textarea>
+
+            <button type="submit" id="item-submit-btn">Save</button>
+            <button type="button" id="item-cancel-btn">Cancel</button>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
