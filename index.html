@@ -84,6 +84,23 @@
                 window.location.href = 'insert.php?delete=' + id;
             }
         }
+
+        function loadItems() {
+            fetch('insert.php?action=list')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('itemList').innerHTML = data;
+                });
+        }
+
+        // Load items on page load
+        window.onload = loadItems;
+
+        function editItem(id, name, quantity) {
+            document.getElementById('item_id').value = id;
+            document.getElementById('item_name').value = name;
+            document.getElementById('item_quantity').value = quantity;
+        }
     </script>
 </head>
 <body>
@@ -106,23 +123,5 @@
             <input type="submit" value="Submit">
         </form>
     </div>
-
-    <script>
-        // Load item list on page load
-        window.onload = function() {
-            fetch('insert.php?action=list')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('itemList').innerHTML = data;
-                });
-        }
-
-        // Function to populate form for editing
-        function editItem(id, name, quantity) {
-            document.getElementById('item_id').value = id;
-            document.getElementById('item_name').value = name;
-            document.getElementById('item_quantity').value = quantity;
-        }
-    </script>
 </body>
 </html>
