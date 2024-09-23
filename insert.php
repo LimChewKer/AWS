@@ -1,7 +1,7 @@
 <?php
-$servername = "rds-endpoint"; // RDS endpoint
+$servername = "proj-db.ccr6d1e6bnfy.us-east-1.rds.amazonaws.com"; // RDS endpoint
 $username = "admin"; // RDS username
-$password = "yourpassword"; // RDS password
+$password = "coolstrongpassword"; // RDS password
 $dbname = "inventorydb"; // Database name
 
 // Enable error reporting for debugging
